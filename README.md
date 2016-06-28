@@ -1,5 +1,2 @@
 # MySkills
-Education, practise
-
-1. Pocket News. Add site using pure HTML and CSS
-2. Pocket News with bootstrap
+Sample project named 'Pocked news' implemented using pure html/css and also has bootstrap version
