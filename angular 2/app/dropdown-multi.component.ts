@@ -64,11 +64,14 @@ export class DropdownMultiComponent {
         }
     }
 
-    select(event,item: any) {
+     select(event,item: any) {
         if(this.controlType == "multiselect"){
             this.selectedItem.push(item);
         }
-        this.query = '';
+        
+        this.query= this.controlType == "multiselect"
+        ? ''
+        : item;
         this.filteredList = [];
         this.selectedIdx = -1;
         event.stopPropagation();
