@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AzureWeatherMon90" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="WeaherMonWeb" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+  </WebRole>
+  <WorkerRole name="WeatherMonWorker" vmsize="ExtraSmall">
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="NumMinutes" />
+      <Setting name="Kazan" />
+      <Setting name="Mosсow" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
+    </ConfigurationSettings>
+  </WorkerRole>
+</ServiceDefinition>

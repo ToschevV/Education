@@ -1,0 +1,17 @@
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Emulator config file set to c:\Users\v-vltosh\Documents\Visual Studio 2017\Projects\AzureWeatherMon90\AzureWeatherMon90\csx\Debug\roles\WeaherMonWeb\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] DiagnosticsStoreRootPath set to: C:\Users\v-vltosh\AppData\Local\dftmp\Resources\6ef4ed9b-d85a-4591-8f8e-ba8837159dce
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Loading config file: c:\Users\v-vltosh\Documents\Visual Studio 2017\Projects\AzureWeatherMon90\AzureWeatherMon90\csx\Debug\roles\WeaherMonWeb\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Config file to read: c:\Users\v-vltosh\Documents\Visual Studio 2017\Projects\AzureWeatherMon90\AzureWeatherMon90\csx\Debug\roles\WeaherMonWeb\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Emulator config file set to c:\Users\v-vltosh\Documents\Visual Studio 2017\Projects\AzureWeatherMon90\AzureWeatherMon90\csx\Debug\roles\WeaherMonWeb\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:29] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:30] No DiagnosticsPlugin is running.
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:30] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:30] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:30] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:27:30] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:28:41] DiagnosticsPlugin launched successfully with new configuration
+DiagnosticsPluginLauncher.exe Information: 0 : [29-Aug-17 13:28:41] DiagnosticPlugin exited with code 0

@@ -1,0 +1,10 @@
+c:\users\v-vltosh\documents\visual studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\bin\Debug\WeaherMonLib.dll
+c:\users\v-vltosh\documents\visual studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\bin\Debug\WeaherMonLib.pdb
+c:\users\v-vltosh\documents\visual studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+c:\users\v-vltosh\documents\visual studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\obj\Debug\WeaherMonLib.dll
+c:\users\v-vltosh\documents\visual studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\obj\Debug\WeaherMonLib.pdb
+c:\users\v-vltosh\documents\visual studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\obj\Debug\WeaherMonLib.csproj.CoreCompileInputs.cache
+c:\Users\v-vltosh\Documents\Visual Studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\bin\Debug\Newtonsoft.Json.dll
+c:\Users\v-vltosh\Documents\Visual Studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\bin\Debug\Microsoft.WindowsAzure.Storage.pdb
+c:\Users\v-vltosh\Documents\Visual Studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+c:\Users\v-vltosh\Documents\Visual Studio 2017\Projects\AzureWeatherMon90\WeaherMonLib\obj\Debug\WeaherMonLib.csprojResolveAssemblyReference.cache
