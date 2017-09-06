@@ -7,7 +7,7 @@
     /// <summary>
     /// Types of measurement
     /// </summary>
-    public enum MeasureType { Temperature, Humidity, Pressure, WeatherCondition }
+    public enum MeasureType { Temperature, Humidity, Pressure, WeatherCondition } // TODO: move it to separate file
 
     public class WeatherRecord : TableEntity
     {

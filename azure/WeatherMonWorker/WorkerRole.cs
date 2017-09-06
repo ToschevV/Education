@@ -26,7 +26,7 @@ namespace WeatherMonWorker
 
         public override void Run()
         {
-            Trace.TraceInformation("WeatherMonWorker is running");
+            Trace.TraceInformation("WeatherMonWorker is running"); // TODO: create wrapper with interface for Trace if you like to test it in future
 
             try
             {
@@ -41,12 +41,12 @@ namespace WeatherMonWorker
         public override bool OnStart()
         {
             // Set the maximum number of concurrent connections
-            ServicePointManager.DefaultConnectionLimit = 12;
+            ServicePointManager.DefaultConnectionLimit = 12; // TODO: maybe put this value to config file
             cities = new List<string>();
-            cities.Add(CloudConfigurationManager.GetSetting("Kazan"));
-            cities.Add(CloudConfigurationManager.GetSetting("Mosсow"));
+            cities.Add(CloudConfigurationManager.GetSetting(Constants.Settings.Kazan));
+            cities.Add(CloudConfigurationManager.GetSetting(Constants.Settings.Mosсow));
             weatherClient = new OpenWeatherMapClient(Config.OpenWeatherMapAPIKey);
-            numMinutes = int.Parse(CloudConfigurationManager.GetSetting("NumMinutes"));
+            numMinutes = int.Parse(CloudConfigurationManager.GetSetting(Constants.Settings.NumMinutes));
 
             // For information on handling configuration changes
             // see the MSDN topic at https://go.microsoft.com/fwlink/?LinkId=166357.
@@ -78,12 +78,14 @@ namespace WeatherMonWorker
                 foreach (var city in cities)
                 {
                     var weather = await weatherClient.CurrentWeather.GetByName(city, MetricSystem.Metric);
+                    // TODO: I would add additional abstraction DataAccess layer and put static WeatherDB inside
+                    // so your code could look like WeatherDA.Add(city, MeasureType.Temperature, weather);
                     WeatherDB.CreateRecord(MeasureType.Temperature, weather.Temperature.Value, new WeatherModel { City = city, WeatherDescription = weather.Weather.Value });
                     WeatherDB.CreateRecord(MeasureType.Pressure, weather.Pressure.Value, new WeatherModel { City = city, WeatherDescription = weather.Weather.Value });
                     WeatherDB.CreateRecord(MeasureType.Humidity, weather.Humidity.Value, new WeatherModel { City = city, WeatherDescription = weather.Weather.Value });
                     WeatherDB.CreateRecord(MeasureType.WeatherCondition, weather.Weather.Number, new WeatherModel { City = city, WeatherDescription = weather.Weather.Value });
                 }
-                await Task.Delay(1000 * 60 * numMinutes);
+                await Task.Delay(1000 * 60 * numMinutes); // TODO: why we have delay here?
             }
         }
     }
