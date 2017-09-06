@@ -59,7 +59,7 @@
         {
             var data = WeatherDB.Table.CreateQuery<WeatherRecord>()
                 .Where(x => x.MeasureDate > DateTime.Now.AddMinutes(-10)
-                    && x.City == city).ToList();
+                    && x.City == city).ToList(); // TODO: you are fetching one set of the data from the db, but then returning only 4 records, better to add second part to main query
             return data
             .Select(x=>x)
             .OrderByDescending(x=>x.MeasureDate)
@@ -74,12 +74,11 @@
         /// <returns>Array of weather records</returns>
         public static WeatherRecord[] GetCurrentMeasureByCity(MeasureType type, string city)
         {
-            var data = WeatherDB.Table.CreateQuery<WeatherRecord>()
+            return WeatherDB.Table.CreateQuery<WeatherRecord>()
                 .Where(x => x.MeasureDate > DateTime.Now.AddMinutes(-10)
                     && x.MeasureType == type
-                    && x.City == city).ToList();
-            return data.OrderByDescending(y => y.MeasureDate)
-                .ToArray();
+                    && x.City == city).OrderByDescending(y => y.MeasureDate)
+                .ToArray(); // TODO: check if it works
         }
     }
 }

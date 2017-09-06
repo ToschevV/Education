@@ -9,11 +9,14 @@
         // GET api/values
         public WeatherViewModel Get([FromUri] string city)
         {
+            // TODO: Your web backend must not know about your db class, because in future you can change getting data from another service/db + for testing this method you have to design your class with dependencies via interfaces
+            // so better to create something like IWeatherDataAccess and inside implementation of this interface use WeatherDB
             var lastRecords = WeatherDB.GetLastDataByCity(city);
             var weather = new WeatherViewModel();
 
             foreach (var rec in lastRecords)
             {
+                // TODO: And you can put mapping logic from record to viewmodel inside this WeatherDataAccess class
                 weather.Date = rec.MeasureDate.ToString("dd/MM/yyyy HH:mm:ss");
                 weather.WeatherCondition = rec.WeatherDescription;
                 weather.Temperature = rec.MeasureType == MeasureType.Temperature
@@ -27,27 +30,6 @@
             }
 
             return weather;
-        }
-
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
         }
     }
 }
